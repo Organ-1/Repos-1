@@ -202,7 +202,7 @@
            </resource>
         </resources>
         
-        <finalName>data_exchange_sz_12345</finalName>
+        <finalName>SSM</finalName>
     	<plugins>
 			<!-- define the project compile level -->
 			<plugin>

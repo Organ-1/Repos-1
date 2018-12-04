@@ -11,4 +11,9 @@
 			<property name="dialect" value="mysql" />
 		</plugin>
 	</plugins>
+	
+	<!-- 设置别名 -->
+    <!-- <typeAliases>
+        <package name="cn.temptation.domain" />
+    </typeAliases> -->
 </configuration>
