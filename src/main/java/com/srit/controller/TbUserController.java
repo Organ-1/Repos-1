@@ -27,7 +27,7 @@ public class TbUserController {
 	@ResponseBody
 	public Object findUserByUid(@PathVariable String uid){
 		return tbUserService.findUserByUid(uid);
-	}
+	}   
 	
 
 	

@@ -6,10 +6,13 @@
 
 	<plugins>
 		<!-- com.github.pagehelper为PageHelper类所在包名 -->
-		<plugin interceptor="com.github.pagehelper.PageHelper">
-			<!-- 设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库 -->
+		<!-- <plugin interceptor="com.github.pagehelper.PageHelper">3.x版本
+			设置数据库类型 Oracle,Mysql,MariaDB,SQLite,Hsqldb,PostgreSQL六种数据库
 			<property name="dialect" value="mysql" />
-		</plugin>
+		</plugin> -->
+		
+		<!-- 5.x版本实现pageinterceptor拦截器实现分页   从4.X版本开始支持自动识别数据库类型，无需配置dialect-->
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin> 
 	</plugins>
 	
 	<!-- 设置别名 -->

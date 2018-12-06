@@ -7,6 +7,40 @@
   <description>12345</description>
   
   
+  <repositories>
+      
+      <repository>  
+	    <id>central</id>  
+	    <name>Central Repository</name>  
+	    <url>https://repo.maven.apache.org/maven2</url>  
+	    <layout>default</layout> 
+	    <releases>  
+        	<enabled>true</enabled>  
+      	</releases>  
+	    <snapshots>  
+	      <enabled>false</enabled>  
+	    </snapshots>  
+	  </repository>
+	  
+	  <repository>
+	  	<id>aliyun</id>
+	    <name>Aliyun Repository</name>
+	    <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+	    <releases>  
+        	<enabled>true</enabled>  
+      	</releases>  
+	    <snapshots>  
+	      <enabled>false</enabled>  
+	    </snapshots>  
+	  </repository>
+	  
+	  <!-- <repository>
+		<id>Tomcat8MavenPlugin</id>
+		<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+      </repository> -->
+  </repositories>
+  
+  
   
    <!-- 集中定义依赖版本号 -->
 	<properties>
@@ -181,9 +215,27 @@
 			<version>${commons-fileupload.version}</version>
 		</dependency>
 		
-		
-		
 	</dependencies>
+	
+	
+	<!-- <pluginRepositories>   
+      <pluginRepository>   
+        <id>alfresco-public</id>    
+        <url>https://artifacts.alfresco.com/nexus/content/groups/public</url>   
+      </pluginRepository>    
+      <pluginRepository>   
+        <id>alfresco-public-snapshots</id>    
+        <url>https://artifacts.alfresco.com/nexus/content/groups/public-snapshots</url>    
+        <snapshots>   
+          <enabled>true</enabled>    
+          <updatePolicy>daily</updatePolicy>   
+        </snapshots>   
+      </pluginRepository>    
+      <pluginRepository>   
+        <id>beardedgeeks-releases</id>    
+        <url>http://beardedgeeks.googlecode.com/svn/repository/releases</url>   
+      </pluginRepository>   
+  	</pluginRepositories> -->
 	
 
 	<!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
@@ -215,6 +267,23 @@
 					<failOnMissingWebXml>true</failOnMissingWebXml>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+	          <!-- <groupId>org.apache.tomcat.maven</groupId>
+	          <artifactId>tomcat8-maven-plugin</artifactId>
+	          <version>3.0-r1655215</version> -->
+	          <!-- <groupId>org.apache.tomcat.maven</groupId>
+			  <artifactId>tomcat8-maven-plugin</artifactId>
+			  <version>3.0-r1756463</version> -->
+			  <groupId>org.apache.tomcat.maven</groupId>
+              <artifactId>tomcat7-maven-plugin</artifactId>
+              <version>2.1</version>
+	          <configuration>
+					<port>8080</port>
+					<path>/</path>
+					<uriEncoding>UTF-8</uriEncoding>
+			  </configuration>
+	        </plugin>
 		</plugins>
         
 	</build>
