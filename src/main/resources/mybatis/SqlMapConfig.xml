@@ -15,7 +15,7 @@
 		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin> 
 	</plugins>
 	
-	<!-- 设置别名 -->
+	<!-- 设置别名  设置到包   别名大小写都可以-->
     <!-- <typeAliases>
         <package name="cn.temptation.domain" />
     </typeAliases> -->
